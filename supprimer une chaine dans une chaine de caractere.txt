@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+//#include <ctype.h>
+int main() {
+    // Write C code here
+    char chaine[50];
+    char c;
+    int n,occ=0;
+    printf("entre une chaine de caractere ");
+   scanf("%s",chaine);
+      printf("entre un caractere ");
+   scanf(" %c",&c);
+   n=strlen(chaine);
+ for(int i=0;i<n;i++){
+     if(chaine[i]==c){
+     for(int j=i;j<n-1;j++){
+         chaine[i]=chaine[i+1];
+     }
+ }
+ }
+   for(int i=0;i<n-1;i++){
+     printf("%c ",chaine[i]);
+   }

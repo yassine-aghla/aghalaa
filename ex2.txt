@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char chaine[50];
+    int i=0;
+    printf("entre une chaine de caractere ");
+   scanf("%s",chaine);
+    printf("votre chaine est %s \n",chaine);
+    while (chaine[i]!='\0'){
+        i++;
+    }
+    printf("la longeur de chaine est %d \n",i);
+
+    return 0;
+}

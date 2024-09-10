@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+//#include <ctype.h>
+int main() {
+    // Write C code here
+    char chaine[50];
+    char c;
+    int n,occ=0;
+    printf("entre une chaine de caractere ");
+   scanf("%s",chaine);
+      printf("entre un caractere ");
+   scanf(" %c",&c);
+   n=strlen(chaine);
+ for(int i=0;i<n;i++){
+     if(chaine[i]==c)
+     occ++;
+ }
+   
+     printf("le nombre doccurence est %d ", occ);
+ 
+
+  
+   
+
+    return 0;
+}

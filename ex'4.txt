@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    // Write C code here
+    char chaine1[50];
+    char chaine2[50];
+    
+    printf("entre une chaine de caractere ");
+   scanf("%s",chaine1);
+    printf("entre une chaine de caractere ");
+   scanf("%s",chaine2);
+   if (strcmp(chaine1,chaine2)==0){
+       printf("les deux chaine sont egaux");
+   }
+else 
+printf("les deux chaine sont pas egaux");
+  
+   
+
+    return 0;
+}
