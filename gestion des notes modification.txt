@@ -1,0 +1,82 @@
+#include <stdio.h>
+float calculer(float t[100],int n){
+    float moyenne;
+    float somme =0;
+      for(int i=0;i<n;i++){
+          somme=somme+t[i];
+    moyenne=somme/n;
+    }
+//printf("%.2f",moyenne);
+return moyenne;
+
+}
+void trouver_min_max(float t[100],int n){
+    float max=t[0];
+    float min=t[0];
+    for(int i=1;i<n;i++){
+        if (t[i]>max)
+        max=t[i];
+      if (t[i]<min)
+        min=t[i];
+}
+printf("la note plus elevee est %.2f\n",max);
+printf("la note plus base est %.2f\n",min);
+}
+void afficher(float t[100],int n){
+    float m=calculer(t,n);
+    for(int i=0;i<n;i++){
+        if(t[i]>m)
+        printf("%.2f\t",t[i]);
+    }
+}
+void compter_val (float t[100],int n){
+    int cpt;
+    for(int i=0;i<n;i++){
+        if(t[i]>=12)
+        cpt++;
+    }
+    printf("le nombre detudiant est %d",cpt);
+}
+void compter_ratt (float t[100],int n){
+    int cpt;
+    for(int i=0;i<n;i++){
+        if(t[i]<=12)
+        cpt++;
+    }
+    printf("le nombre detudiant est %d",cpt);
+}
+int main() {
+    int n;
+    float t[100];
+    int choix;
+    printf("combien deutudiant yat il \n");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+    printf("entre la note deutudiant %d \n",i+1);
+    scanf("%f",&t[i]);
+    }
+    printf("Que souhaitez vous faire \n");
+    printf("1-caculer la mayenne des notes \n");
+    printf("2-trouver la note la plus elevee et la plus basee \n");
+    printf("3-afficher les note superieur a la moyenne \n");
+    printf("4-compter le nombre d etudiants ayant validee \n");
+    printf("5-compter le nombre d etudiants en rattrapage \n");
+    printf("6-Quitter \n");
+    printf("entrer votre chiox:\n");
+    scanf("%d",&choix);
+     switch(choix){
+         case 1:printf("le moyenne est %.2f " ,calculer(t,n));
+         break;
+        case 2: trouver_min_max(t,n);
+        break;
+        case 3: afficher(t,n);
+        break;
+        case 4:compter_val(t,n);
+        break;
+        case 5:compter_ratt(t,n);
+     break;
+        
+     }
+   
+    return 0;
+}
